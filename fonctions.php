@@ -45,6 +45,32 @@ function checkLogin($pseudo, $password)
 
 /*
 Thomas Rempenault
+Créé le : 24/04/2012
+Modifié le : 25/04/2012 (Thomas Rempenault)
+Fonction qui permet de supprimer un membre de la base de données
+Paramètres entrée : aucun
+Paramètre sortie : aucun
+*/
+function deleteMember()
+{
+	$pseudo = $_SESSION['pseudo'];
+	$request = "DELETE FROM membres WHERE pseudo = '".$pseudo."'";
+	$request = mysql_query($request);
+	if($request) { 
+		$_SESSION['status'] = 1;
+		$_SESSION['msg'] = "Votre compte a bien été supprimé";
+	}
+	else {
+		$_SESSION['status'] = 2;
+		$_SESSION['msg'] = "Erreur";
+	}
+	header('Location: index.php');
+}
+
+
+
+/*
+Thomas Rempenault
 Créé le : 13/04/2012
 Modifié le : 17/04/2012 (Thomas Rempenault)
 Fonction qui permet d'afficher les prix du carburant sélectionné en fonction du lieu choisi par l'utilisateur

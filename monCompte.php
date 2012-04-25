@@ -27,8 +27,13 @@
 <p><input type='submit' value='Modifier mon avatar' name='submit' style="margin-left:0px;"></p>
 </div>
 </form>
-</div>
 
+<form method="POST" action="deleteMember.php">
+<div class='input'>
+<p><input type='submit' name='submit' value='Supprimer mon compte' style="margin-left:0px;"></p>
 </div>
+</form>
+
+</div></div>
 
 </body></html>

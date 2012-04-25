@@ -30,6 +30,18 @@
 	<?php }
 	}
 	unset($_SESSION['msgJS']);
+	
+	// on affiche un message si besoin
+	if(isset($_SESSION['status'])) {
+		if($_SESSION['status'] == 1) {
+			echo "<div class='ok'><div align='center'>".$_SESSION['msg']."</div></div>";
+		}
+		elseif($_SESSION['status'] == 2) {
+			echo "<div class='error'><div align='center'>".$_SESSION['msg']."</div></div>";
+		}
+	}
+	unset($_SESSION['msg']);
+	unset($_SESSION['status']);
 ?>		
 <br/><br/><br/><br/>
 <div class="col1" style="margin-left: 30px; padding: 20px 20px 20px 20px;">
