@@ -9,7 +9,7 @@ Page où l'utilisateur renseigne la ville, puis la marque, l'adresse et le tél�
 	include("boutonDeco.php");
 	$BDD= mysql_connect('localhost','root','');
 	mysql_select_db('france');
-	echo('('('())))
+	echo('(
 ?>
 <!DOCTYPE html>
 <html lang="fr"><head>
